@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  hotel_server:
+    build: ./hotel_server
+    command: python server.py
+    ports:
+      - "8003:8003"
+
+  flight_server:
+    build: ./flight_server
+    command: python server.py
+    ports:
+      - "8002:8002"
+
+  car_server:
+    build: ./car_server
+    command: python server.py
+    ports:
+      - "8001:8001"
+
+  reservation_server:
+    build: ./reservation_server
+    command: python server.py
+    ports:
+      - "8004:8004"
